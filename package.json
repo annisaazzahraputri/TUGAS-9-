@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "laundryrku-frontend-integration",
   "private": true,
   "version": "1.0.0",
@@ -18,5 +19,39 @@
     "@vitejs/plugin-react": "4.3.4",
     "typescript": "5.7.3",
     "vite": "5.4.14"
+=======
+  "name": "laundryrku-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend NestJS CRUD pesanan untuk aplikasi Laundryrku",
+  "scripts": {
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.0.1",
+    "@nestjs/core": "^11.0.1",
+    "@nestjs/mapped-types": "^2.1.0",
+    "@nestjs/platform-express": "^11.0.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.0",
+    "@nestjs/schematics": "^11.0.0",
+    "@nestjs/testing": "^11.0.1",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "prettier": "^3.4.2",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.7.2"
+>>>>>>> 877d77f5563ba145504ed28a9a2be378d21046e4
   }
 }

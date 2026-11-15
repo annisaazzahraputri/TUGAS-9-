@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 node_modules
 dist
 .env.local
+=======
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+coverage/
+*.log
+>>>>>>> 877d77f5563ba145504ed28a9a2be378d21046e4
 .DS_Store

@@ -1,0 +1,61 @@
+@baseUrl = http://localhost:3001
+
+POST {{baseUrl}}/orders
+Content-Type: application/json
+
+{
+  "namaPelanggan": "Annisa",
+  "nomorTelepon": "081234567890",
+  "jenisLayanan": "Cuci Setrika",
+  "beratKg": 2.5,
+  "tanggalMasuk": "2026-11-14",
+  "catatan": "Pisahkan pakaian putih"
+}
+
+### 2. GET ALL
+GET {{baseUrl}}/orders
+
+### 3. GET ONE
+
+@orderId = 675dceb3-62e6-400f-9205-500661fb029d
+GET {{baseUrl}}/orders/{{orderId}}
+
+### 4. UPDATE 
+PATCH {{baseUrl}}/orders/{{orderId}}
+Content-Type: application/json
+
+{
+  "status": "Diproses",
+  "catatan": "Sedang dicuci"
+}
+
+### 5. DELETE 
+DELETE {{baseUrl}}/orders/{{orderId}}
+
+### 6. ERROR 
+GET {{baseUrl}}/orders/id-tidak-ada
+
+### 7. ERROR 
+POST {{baseUrl}}/orders
+Content-Type: application/json
+
+{
+  "namaPelanggan": "Annisa",
+  "nomorTelepon": "081234567890",
+  "jenisLayanan": "Cuci Setrika",
+  "beratKg": 2.5,
+  "tanggalMasuk": "2026-11-14",
+  "catatan": "Pisahkan pakaian putih"
+}
+
+### 8. ERROR 
+POST {{baseUrl}}/orders
+Content-Type: application/json
+
+{
+  "namaPelanggan": "A",
+  "nomorTelepon": "123",
+  "jenisLayanan": "Laundry Express",
+  "beratKg": -4,
+  "tanggalMasuk": "bukan-tanggal"
+}
