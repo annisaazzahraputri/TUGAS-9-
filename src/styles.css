@@ -1,0 +1,44 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #242a35;
+  background: #f5f7f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input, select, textarea { font: inherit; }
+.app-shell { min-height: 100vh; display: flex; flex-direction: column; }
+.app-topbar {
+  height: 72px; padding: 0 clamp(20px, 5vw, 72px); display: flex; align-items: center;
+  justify-content: space-between; background: #fff; border-bottom: 1px solid #e7eae8;
+}
+.app-brand { display: inline-flex; align-items: center; gap: 10px; color: #242a35; text-decoration: none; }
+.app-brand__mark {
+  width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px;
+  background: #286451; color: #fff; font-weight: 900; font-size: 21px;
+}
+.app-brand__name { font-size: 21px; font-weight: 850; letter-spacing: -.06em; }
+.app-brand__name span { color: #347c69; }
+.app-topbar__label { color: #7a837f; font-size: 13px; }
+.app-main { width: min(1320px, calc(100% - 40px)); margin: 36px auto 48px; flex: 1; }
+.app-welcome {
+  display: flex; justify-content: space-between; align-items: center; gap: 20px;
+  padding: clamp(22px, 4vw, 34px); margin-bottom: 26px; border-radius: 20px;
+  background: linear-gradient(120deg, #e9f3ee, #f7faf8); border: 1px solid #dcebe3;
+}
+.app-welcome__eyebrow { margin: 0 0 8px; color: #347c69; font-size: 10px; font-weight: 850; letter-spacing: .15em; }
+.app-welcome h1 { margin: 0; color: #203a31; font-size: clamp(23px, 3vw, 32px); letter-spacing: -.045em; }
+.app-welcome p:last-child { margin: 8px 0 0; color: #65756d; font-size: 14px; }
+.app-welcome__icon { width: 58px; height: 58px; flex: 0 0 58px; display: grid; place-items: center; border-radius: 18px; background: #d6e9de; color: #286451; font-size: 30px; }
+.app-footer { padding: 20px; text-align: center; color: #8a928e; border-top: 1px solid #e7eae8; background: #fff; font-size: 11px; }
+@media (max-width: 600px) {
+  .app-topbar { height: 62px; }
+  .app-topbar__label { display: none; }
+  .app-main { width: min(100% - 24px, 1320px); margin-top: 20px; }
+  .app-welcome { align-items: flex-start; }
+  .app-welcome__icon { width: 42px; height: 42px; flex-basis: 42px; font-size: 22px; }
+}

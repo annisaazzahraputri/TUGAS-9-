@@ -1,0 +1,125 @@
+.laundry-orders {
+  --lo-ink: #242a35;
+  --lo-muted: #727b89;
+  --lo-line: #e7eaf0;
+  --lo-surface: #ffffff;
+  --lo-soft: #f7f8fb;
+  --lo-accent: #347c69;
+  --lo-accent-dark: #286451;
+  color: var(--lo-ink);
+  width: 100%;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.laundry-orders * { box-sizing: border-box; }
+.laundry-orders__header,
+.laundry-orders__section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.laundry-orders__header { margin-bottom: 24px; }
+.laundry-orders__eyebrow {
+  margin: 0 0 6px;
+  color: var(--lo-accent);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+.laundry-orders h1 { margin: 0; font-size: clamp(24px, 3vw, 32px); letter-spacing: -.035em; }
+.laundry-orders h2 { margin: 0; font-size: 18px; letter-spacing: -.02em; }
+.laundry-orders__intro { margin: 7px 0 0; color: var(--lo-muted); font-size: 14px; }
+.laundry-orders__layout { display: grid; grid-template-columns: minmax(280px, 350px) minmax(0, 1fr); gap: 20px; align-items: start; }
+.laundry-orders__form,
+.laundry-orders__list-card {
+  min-width: 0;
+  padding: 22px;
+  background: var(--lo-surface);
+  border: 1px solid var(--lo-line);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(30, 44, 60, .045);
+}
+.laundry-orders__form { display: grid; gap: 15px; }
+.laundry-orders__section-heading { margin-bottom: 4px; }
+.laundry-orders__editing,
+.laundry-orders__count {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #edf6f2;
+  color: var(--lo-accent-dark);
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.laundry-orders__field { display: grid; gap: 7px; color: #495260; font-size: 12px; font-weight: 700; }
+.laundry-orders__field small { color: var(--lo-muted); font-weight: 400; }
+.laundry-orders__field input,
+.laundry-orders__field select,
+.laundry-orders__field textarea {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #dfe4ea;
+  border-radius: 10px;
+  outline: none;
+  background: #fff;
+  color: var(--lo-ink);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  transition: border-color .15s, box-shadow .15s;
+}
+.laundry-orders__field textarea { resize: vertical; }
+.laundry-orders__field input:focus,
+.laundry-orders__field select:focus,
+.laundry-orders__field textarea:focus { border-color: var(--lo-accent); box-shadow: 0 0 0 3px rgba(52, 124, 105, .12); }
+.laundry-orders__form-row { display: grid; grid-template-columns: 1.2fr .8fr; gap: 10px; }
+.laundry-orders__form-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 2px; }
+.laundry-orders button { cursor: pointer; font: inherit; }
+.laundry-orders button:disabled { cursor: not-allowed; opacity: .6; }
+.laundry-orders__primary,
+.laundry-orders__secondary {
+  min-height: 39px;
+  padding: 9px 13px;
+  border-radius: 10px;
+  font-size: 12px !important;
+  font-weight: 750 !important;
+}
+.laundry-orders__primary { border: 1px solid var(--lo-accent); background: var(--lo-accent); color: #fff; }
+.laundry-orders__primary:hover { background: var(--lo-accent-dark); }
+.laundry-orders__secondary { border: 1px solid var(--lo-line); background: #fff; color: #4a5360; }
+.laundry-orders__secondary:hover { background: var(--lo-soft); }
+.laundry-orders__list-card { min-height: 260px; }
+.laundry-orders__table-wrap { width: 100%; margin-top: 16px; overflow-x: auto; }
+.laundry-orders__table { width: 100%; border-collapse: collapse; text-align: left; font-size: 12px; }
+.laundry-orders__table th { padding: 12px 10px; color: var(--lo-muted); background: var(--lo-soft); font-size: 10px; font-weight: 800; letter-spacing: .04em; white-space: nowrap; }
+.laundry-orders__table td { padding: 13px 10px; border-bottom: 1px solid var(--lo-line); vertical-align: middle; }
+.laundry-orders__table tbody tr:last-child td { border-bottom: 0; }
+.laundry-orders__table td:first-child { min-width: 145px; }
+.laundry-orders__subtext { display: block; margin-top: 3px; color: var(--lo-muted); font-size: 11px; }
+.laundry-orders__status { display: inline-block; padding: 5px 8px; border-radius: 999px; background: #f1f3f6; color: #586170; font-size: 10px; font-weight: 750; white-space: nowrap; }
+.laundry-orders__status--diproses { background: #edf4ff; color: #3563a3; }
+.laundry-orders__status--selesai { background: #eaf6ef; color: #28734a; }
+.laundry-orders__status--diambil { background: #f1edfb; color: #7053a4; }
+.laundry-orders__actions { display: flex; flex-wrap: wrap; gap: 5px; min-width: 170px; }
+.laundry-orders__actions button { padding: 6px 8px; border: 1px solid var(--lo-line); border-radius: 7px; background: #fff; color: #47515e; font-size: 10px; font-weight: 700; }
+.laundry-orders__actions button:hover { background: var(--lo-soft); }
+.laundry-orders__actions .laundry-orders__delete { color: #b44343; border-color: #f0dada; }
+.laundry-orders__empty { display: grid; place-content: center; gap: 7px; min-height: 175px; text-align: center; color: var(--lo-muted); font-size: 13px; }
+.laundry-orders__empty strong { color: var(--lo-ink); font-size: 14px; }
+.laundry-orders__alert { margin: 0 0 14px; padding: 11px 13px; border: 1px solid; border-radius: 10px; font-size: 12px; }
+.laundry-orders__alert--error { border-color: #f1caca; background: #fff6f6; color: #a53636; }
+.laundry-orders__alert--success { border-color: #d2e9dc; background: #f3fbf6; color: #286a45; }
+.laundry-orders__footnote { margin: 14px 2px 0; color: var(--lo-muted); font-size: 11px; line-height: 1.5; }
+
+@media (max-width: 900px) {
+  .laundry-orders__layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .laundry-orders__header { align-items: flex-start; }
+  .laundry-orders__form,
+  .laundry-orders__list-card { padding: 16px; border-radius: 14px; }
+  .laundry-orders__form-row { grid-template-columns: 1fr; }
+  .laundry-orders__table { min-width: 720px; }
+}
